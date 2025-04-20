@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         )}
         
-        <main className={`flex-grow p-4 md:p-6 transition-all duration-300 ${!isLoginPage && sidebarOpen ? 'md:ml-64' : ''}`}>
+        <main className={`flex-grow p-4 md:p-6 transition-all duration-300 ${!isLoginPage ? (sidebarOpen ? 'md:ml-64' : 'ml-0') : ''}`}>
           {children}
         </main>
       </div>
