@@ -17,10 +17,10 @@ const Layout = ({ children }: LayoutProps) => {
   const isLoginPage = location.pathname === '/login';
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
       
-      <div className="flex">
+      <div className="flex flex-1">
         {!isLoginPage && (
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         )}
