@@ -20,7 +20,7 @@ interface NavbarProps {
 const Navbar = ({ onMenuClick }: NavbarProps) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [notifications, setNotifications] = useState(3); // Mock notifications
+  const [notifications, setNotifications] = useState(3);
 
   const handleLogout = () => {
     logout();
@@ -28,7 +28,7 @@ const Navbar = ({ onMenuClick }: NavbarProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm md:relative">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto">
         <div className="flex items-center">
           <Button onClick={onMenuClick} variant="ghost" size="icon" className="md:hidden mr-2">
