@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// City Pulse specific colors
+				"city-blue": {
+					50: "#e6f7ff",
+					100: "#bae3ff",
+					200: "#7cc4fa",
+					300: "#34a4f0",
+					400: "#0ea5e9", // main blue
+					500: "#0284c7",
+					600: "#0369a1",
+					700: "#075985",
+					800: "#0c4a6e",
+					900: "#082f49"
+				},
+				"city-green": {
+					50: "#ecfdf5",
+					100: "#d1fae5",
+					200: "#a7f3d0",
+					300: "#6ee7b7",
+					400: "#10b981", // main green
+					500: "#059669",
+					600: "#047857",
+					700: "#065f46",
+					800: "#064e3b",
+					900: "#022c22"
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},
